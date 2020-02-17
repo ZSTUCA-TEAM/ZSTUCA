@@ -1,0 +1,50 @@
+.banner {POSITION: relative; HEIGHT: 314px; OVERFLOW: hidden;}
+.banner IMG {BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px;}
+#ImageCyclerImage {	POSITION: relative; WIDTH: 474px; OVERFLOW: hidden; TOP: 0px; LEFT: 198px; float:left; height:310px;}
+#ImageCyclerOverlay {POSITION: absolute; padding:0px 10px 0px 40px; WIDTH: 425px; BOTTOM: 4px; COLOR: #fff; OVERFLOW: hidden; LEFT:198px; line-height:160%; height:50px;}
+#ImageCyclerOverlay A {	FONT-WEIGHT: bold; TEXT-DECORATION: none;}
+#ImageCyclerOverlay P {	POSITION: relative; MARGIN-TOP: 0px; width:400px; font-family:Arial, Helvetica, sans-serif;}
+#ImageCyclerOverlay P.title {PADDING-top:8px; FONT-WEIGHT: bold;}
+#ImageCyclerOverlayBackground {
+	POSITION: absolute;
+	WIDTH: 475px;
+	BACKGROUND: #000;
+	LEFT: -10px;
+	opacity: 0.7;
+	padding:10px;
+	top: 2px;
+}
+#ImageCyclerTabs {POSITION: absolute; TOP: 0px; LEFT: 0px; float:left;}
+#mg A {PADDING-BOTTOM: 0px; PADDING:5px 0px 0px 13px; WIDTH: 185px; DISPLAY: block; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/mg1.png) repeat-x; HEIGHT:57px;}
+#mg A.active {WIDTH: 220px; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/mg01.png) repeat-x;}
+#jnd A {PADDING-BOTTOM: 0px; PADDING:8px 0px 0px 13px; WIDTH: 185px; DISPLAY: block; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/jnd1.png) repeat-x; HEIGHT:54px;}
+#jnd A.active {	WIDTH: 220px; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/jnd01.png) repeat-x;}
+#yg A {PADDING-BOTTOM: 0px; PADDING:8px 0px 0px 13px; WIDTH: 185px; DISPLAY: block; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/yg1.png) repeat-x; HEIGHT:54px;}
+#yg A.active {	WIDTH: 220px; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/yg01.png) repeat-x;}
+#dg A {PADDING-BOTTOM: 0px; PADDING:8px 0px 0px 13px; WIDTH: 185px; DISPLAY: block; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/dg1.png) repeat-x; HEIGHT:54px;}
+#dg A.active {	WIDTH: 220px; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/dg01.png) repeat-x;}
+#fg A {PADDING-BOTTOM: 0px; PADDING:8px 0px 0px 13px; WIDTH: 185px; DISPLAY: block; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/fg1.png) repeat-x; HEIGHT:54px;}
+#fg A.active {	WIDTH: 220px; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/fg01.png) repeat-x;}
+#ImageCyclerTabs A.grey {BACKGROUND-POSITION: 0px -168px;}
+.grey#ImageCyclerOverlay A {COLOR: #9f9fa3;}
+.grey#ImageCyclerOverlay #ImageCyclerOverlayBackground {BORDER-TOP: #9f9fa3 4px solid; height:50px;}
+.grey#ImageCyclerOverlay #ImageCyclerOverlayBackground {BORDER-TOP: #9f9fa3 4px solid; height:50px;}
+#Layer1 {
+	position:absolute;
+	right:0px;
+	top: 0px;
+	float:right;
+	width: 235;
+	height: 100;
+	text-align:right;
+}
+#hg A {PADDING-BOTTOM: 0px; PADDING:5px 0px 0px 13px; WIDTH: 185px; DISPLAY: block; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/hg1.png) repeat-x; HEIGHT:57px; text-align:left;}
+#hg A.active {WIDTH: 220px; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/hg01.png) repeat-x; text-align:left;}
+#rb A {PADDING-BOTTOM: 0px; PADDING:8px 0px 0px 13px; WIDTH: 185px; DISPLAY: block; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/rb1.png) repeat-x; HEIGHT:54px; text-align:left;}
+#rb A.active {	WIDTH: 220px; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/rb01.png) repeat-x; text-align:left;}
+#xjp A {PADDING-BOTTOM: 0px; PADDING:8px 0px 0px 13px; WIDTH: 185px; DISPLAY: block; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/xjp1.png) repeat-x; HEIGHT:54px; text-align:left;}
+#xjp A.active {	WIDTH: 220px; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/xjp01.png) repeat-x; text-align:left;}
+#odly A {PADDING-BOTTOM: 0px; PADDING:8px 0px 0px 13px; WIDTH: 185px; DISPLAY: block; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/odly1.png) repeat-x; HEIGHT:54px; text-align:left;}
+#odly A.active {	WIDTH: 220px; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/odly01.png) repeat-x; text-align:left;}
+#qt A {PADDING-BOTTOM: 0px; PADDING:8px 0px 0px 13px; WIDTH: 185px; DISPLAY: block; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/qt1.png) repeat-x; HEIGHT:54px; text-align:left;}
+#qt A.active {	WIDTH: 220px; BACKGROUND: url(../../../../mrsoft/mrsoft/css/img/qt01.png) repeat-x; text-align:left;}

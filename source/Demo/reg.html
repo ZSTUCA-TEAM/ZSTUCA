@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	
+<title>注册</title>
+<style>
+	body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #eee;
+	}
+	#errorinfo {
+	font-family: "微软雅黑";
+	font-size: 16px;
+	line-height: 50px;
+	color: #F00;
+	background-color: #CCC;
+	height: 60px;
+	width: 400px;
+	border: 1px solid #D6D6D6;
+	position: absolute;
+	left: 40%;
+	top: 10%;
+	display:none;
+	border-radius:5px;
+	text-align: center;
+	z-index:9999;
+	}
+	#container {
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color: #333;
+	height: 400px;
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+	text-align: center;
+	}
+    .reg-group {
+	height: 30px;
+	width: 100%;
+	margin-top: 15px;
+	line-height: 30px;
+	}
+    .reg-title {
+	line-height: 30px;
+	float: left;
+	width: 120px;
+	margin-left: 100px;
+	text-align: right;
+	height: 30px;
+}
+    .reg-input {
+	text-align: left;
+	line-height: 30px;
+	font-size: 24px;
+	float: left;
+	height: 30px;
+	width: 240px;
+	margin-left: 10px;
+	border: 1px solid #333;
+	border-radius:3px;
+}
+    .reg-btn {
+	line-height: 30px;
+	height: 35px;
+	width: 100px;
+	margin-left: 30px;
+	border: 1px solid #333;
+	font-size: 20px;
+	color: #FFF;
+	background-color: #333;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.reg-btn:hover{
+	color: #333;
+	background-color: #FFF;
+	}
+.reg-btn:active{
+	color: #333;
+	background-color:#C30;
+	}
+    </style>  
+	<script src="js/jquery-3.3.1.js"></script>
+	<script language="javascript" type="text/javascript">
+		var flag0=false;
+		var flag1=false;
+		var flag2=false;
+		var flag3=true;
+		$(document).ready(function(e){
+			$('input#username').blur(function(){
+				var u=$(this).val();
+				if(u==''){
+					flag0=false;
+					return;
+				}
+				//alert(u);
+				var t=/^\w{6,16}$/;
+				if(!t.test(u)){
+					$('#errorinfo').html('请输入6-16字符的用户名。');
+					$('#errorinfo').fadeIn('slow');
+					$('#errorinfo').fadeOut(3000);
+					flag0=false;
+					return;
+				}else{
+					$.get('ValidUser.asp?username='+u,function(data){
+						var ret=$.parseJSON(data);
+						if(!ret.flag){
+							$('#errorinfo').html('用户名已存在。');
+							$('#errorinfo').fadeIn('slow');
+							$('#errorinfo').fadeOut(3000);
+							flag0=false;
+							return;
+						}
+					});
+					flag0=true;
+				}
+				flag0=true;
+			})
+			$('input#psd').blur(function(){
+				var p=$(this).val();
+				if(p==''){
+					flag1=false;
+					return;
+				}
+				//alert(u);
+				var t=/^\w{6,}$/;
+				if(!t.test(p)){
+					$('#errorinfo').html('请输入6位以上的密码。');
+					$('#errorinfo').fadeIn('slow');
+					$('#errorinfo').fadeOut(3000);
+					flag1=false;
+					return;
+				}
+				flag1=true;
+			})
+			$('input#repsd').blur(function(){
+				var p=$(this).val();
+				if(p==''){
+					flag2=false;
+					return;
+				}
+				//alert(u);
+				var p1=$('input#psd').val();
+				if(p!=p1){
+					$('#errorinfo').html('两次密码不一致。');
+					$('#errorinfo').fadeIn('slow');
+					$('#errorinfo').fadeOut(3000);
+					flag2=false;
+					return;
+				}
+				flag2=true;
+			})
+			$('input#phone').blur(function(){
+				var p=$(this).val();
+				var t=/^[1][3,5,7,8,9][0-9]{9}$/;
+				if(p==''){
+					flag3=true;
+					return;
+				}else if(!t.test(p)){
+					$('#errorinfo').html('请输入正确的手机号码。');
+					$('#errorinfo').fadeIn('slow');
+					$('#errorinfo').fadeOut(3000);
+					flag3=false;
+					return;
+				}
+				flag3=true;
+			})
+			
+			$('input#regBtn').click(function(){
+				if(flag1&&flag1&&flag2&&flag3){
+					$('#form1').submit();
+				}else{
+					$('#errorinfo').html('请正确填写信息！');
+					$('#errorinfo').fadeIn('slow');
+					$('#errorinfo').fadeOut(3000);
+					return;
+				}  
+			})
+		
+		
+		})
+		
+			
+		$(document).keydown(function(){
+			 if(window.event.keyCode==13){
+				if(flag0&&flag1&&flag2&&flag3){
+					$('#form1').submit();
+					window.location.href='Login.asp';
+				}else{
+					$('#errorinfo').html('请正确填写信息！');
+					$('#errorinfo').fadeIn('slow');
+					$('#errorinfo').fadeOut(3000);
+					return;
+				}  
+			}//
+		})
+		function register(){
+			$('#errorinfo').html('注册成功！');
+			$('#errorinfo').fadeIn('slow');
+			$('#errorinfo').fadeOut(3000);
+			window.location.href='Login.asp';
+			
+		}
+		
+	</script>
+</head>
+
+<body>
+<div id="errorinfo">提示信息</div>
+<div id="container">
+  <form id="form1" name="form1" method="post" action="res.asp">
+    <h3>用户注册</h3>
+    <div class="reg-group"><span class="reg-title">用户名：</span>
+      <input name="username" type="text" class="reg-input" id="username" />
+    </div>
+    <div class="reg-group"><span class="reg-title">密码：</span>
+      <input name="psd" type="password" class="reg-input" id="psd" />
+    </div>
+    <div class="reg-group"><span class="reg-title">重复密码：</span>
+      <input name="repsd" type="password" class="reg-input" id="repsd" />
+    </div>
+    <div class="reg-group"><span class="reg-title">手机号码：</span>
+      <input name="phone" type="text" class="reg-input" id="phone" />
+    </div>
+    <div class="reg-group">
+      <input name="regBtn" type="button" class="reg-btn" id="regBtn" value="注册"  />
+      <input name="regReset" type="reset" class="reg-btn" id="regReset" value="重置" />
+    </div>
+  </form>
+</div>
+
+
+</body>
+</html>

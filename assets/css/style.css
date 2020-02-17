@@ -1,0 +1,291 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+img{display: block;}
+a{text-decoration: none;color: #646464}
+h1,h2,h3{font-size: 16px;}
+body{font-family: Arial;}
+.l{float: left;}
+.r{float:right;}
+.clear:after{content:"";display:block;clear: both;}
+.container{margin:0 auto;position: relative;}
+.container-fluid{width: 100%;}
+p{text-indent:2em;}
+.main{
+    max-width: 1080px;
+    min-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*轮播*/
+.carousel {
+    display: flex;
+    padding: 40px 0;
+    background:rgba(243,244,248,1);
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+  
+  }
+  .carousel .header {
+    font-size: 60px;
+  }
+  .carousel .content {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 16px;
+  }
+  .carousel .button {
+    padding: 8px 20px;
+    line-height: 30px;
+    border-radius: 10000px;
+    color: #fff;
+    background: #4895ff;
+    transition: background .3s;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .carousel .button:hover {
+    background: #2f333e;
+  }
+  .carousel a {
+    text-decoration: none;
+  }
+  .carousel img {
+    width: 50%;
+  }
+  .carousel .ppt_download{
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+  }
+  .carousel .ppt_download:hover{
+    margin-left: 0px;
+    width: 22px;
+    height: 22px;
+  }
+  
+
+  /*footer*/
+.popoverinfo {
+  opacity: 0;
+  transition: .3s;
+  pointer-events: none;
+}
+.popover_ctl {
+  position: relative;
+  display: inline-block;
+}
+
+.popover_ctl:hover .popoverinfo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.footer {
+  width: 100%;
+  background:linear-gradient(217deg,#4895FF 0%,#7AB2FF 100%);
+  color: #DDDDDD;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 0;
+  position: relative;
+}
+.call_me_redhomer {
+  color: #FFFFFF;
+  margin: 10px 0;
+}
+.footer_info {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.about_us {
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+.about_us > span {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 30px;
+  padding: 10px 24px;
+  color: #222222;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 12px;
+  transition: .3s;
+}
+.about_us:hover > span {
+  background: #2F333E;
+  color: #FFFFFF;
+}
+.link_us {
+  left: -50px;
+  bottom: 30px;
+  width: 154px;
+  color: #666666;
+  background: #fff;
+  margin-top: 2px;
+  padding: 6px 16px 8px 16px;
+  border-radius: 8px;
+  border: #404040 2px solid;
+  position: absolute;
+  text-align: left;
+}
+.link_us .link_icon {
+  width: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.link_us .link_text {
+  margin-left: 10px;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.link_us .join_us {
+  margin: 4px 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.footer_circle:hover {
+  background: #2F333E;
+}
+.footer_circle {
+  padding: 8px;
+  margin: 0 12px;
+  position: relative;
+  background: #222222;
+  border-radius: 50%;
+  vertical-align: middle;
+  display: inline-block;
+  transition: .3s;
+}
+
+.footer_circle svg {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  fill: #FFFFFF;
+}
+
+.footer .link_button .footer_circle:hover > svg {
+  fill: #FFFFFF;
+}
+.link_button{
+  cursor: pointer;
+  color: #FFFFFF
+}
+.wechat_code_bg {
+  right: -44px;
+  bottom: 50px;
+  padding: 6px;
+  margin-top: 2px;
+  color: #666666;
+  background: #fff;
+  border-radius: 8px;
+  border: #404040 2px solid;
+  font-size: 12px;
+  position: absolute;
+  width: 120px;
+  text-align: center;
+}
+
+.link_button .wechat_code_bg .wechat_code {
+  width: 120px;
+  height: 130px;
+}
+
+@media (max-width: 860px) {
+  .who_we_are .content .feature_name {
+    display: block;
+    padding: 10px 0;
+  }
+  .who_we_are .content .feature_content {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  /*.topbar .logo {*/
+  /*  display: none;*/
+  /*}*/
+  /*.topbar .menu_button{*/
+  /*  display: inline-block;*/
+  /*}*/
+  .topbar .logo {
+    margin-left: 0;
+  }
+  .topbar .club_name {
+    text-align: center;
+  }
+  .topbar .right {
+    display: none;
+  }
+
+  .carousel .header {
+    font-size: 24px;
+  }
+  .carousel .content {
+    font-size: 12px;
+  }
+  .who_we_are {
+    padding: 6px;
+  }
+  .who_we_are .title {
+    padding-bottom: 10px;
+  }
+  .who_we_are .content{
+    flex-direction: column;
+    padding-bottom: 40px;
+    align-items: center;
+  }
+  .who_we_are .feature {
+    padding: 20px;
+    margin: 10px 0;
+  }
+  .who_we_are .content .feature_name {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .product {
+    padding-top: 36px;
+  }
+  .product .content {
+    flex-direction: column;
+  }
+  .product .text {
+    padding: 30px 0 4px;
+  }
+  .product .text .arrow {
+    display: none;
+  }
+  .product .pagination {
+    padding-top: 0;
+  }
+  .product .content.absolute {
+    bottom: auto;
+    top: 78px;
+  }
+  .product .phone_arrow {
+    display: block;
+  }
+
+  .all_departments .title{
+    padding-top: 36px;
+  }
+  .all_departments .department {
+    padding: 10px 16px;
+  }
+  .all_departments .department .introduce .club_name {
+    padding-bottom: 10px;
+  }
+
+  .footer {
+    padding: 20px 0;
+  }
+}

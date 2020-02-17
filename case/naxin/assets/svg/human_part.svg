@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="428.563" height="309.01" viewBox="0 0 428.563 309.01">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5f8fe;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4, .cls-5 {
+        stroke: #4895ff;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 7px;
+      }
+
+      .cls-3 {
+        stroke: #ff4da6;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke-linecap: round;
+      }
+
+      .cls-4 {
+        stroke-width: 4px;
+      }
+
+      .cls-5 {
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="组_149" data-name="组 149" transform="translate(-1011.436 -1778.015)">
+    <g id="bg" transform="translate(734.283 1592.752)">
+      <g id="bg-2" data-name="bg" transform="translate(336.919 149.337) rotate(14)">
+        <g id="组_85" data-name="组 85" transform="translate(63.198 0)">
+          <g id="组_84" data-name="组 84" transform="translate(0 0)">
+            <g id="组_83" data-name="组 83" transform="translate(6.369)">
+              <path id="路径_353" data-name="路径 353" class="cls-1" d="M0,82.37a83.2,83.2,0,0,0,160.648,30.406A116.179,116.179,0,0,1,71.476,0,83.33,83.33,0,0,0,0,82.37Z" transform="translate(0 123.118)"/>
+              <path id="路径_354" data-name="路径 354" class="cls-1" d="M115.443,0A116.152,116.152,0,0,0,0,103.41a96.461,96.461,0,0,1,11.042-.639,96.059,96.059,0,0,1,95.951,95.949,95.491,95.491,0,0,1-5.74,32.7,117.386,117.386,0,0,0,14.191.864A116.141,116.141,0,1,0,115.443,0Z" transform="translate(78.937)"/>
+              <path id="路径_355" data-name="路径 355" class="cls-1" d="M89.172,113.619a82.747,82.747,0,0,0,5.778-30.406A83.307,83.307,0,0,0,11.737,0,83.414,83.414,0,0,0,0,.844,116.179,116.179,0,0,0,89.172,113.619Z" transform="translate(71.476 122.275)"/>
+            </g>
+            <circle id="椭圆_18" data-name="椭圆 18" class="cls-1" cx="89.581" cy="89.581" r="89.581" transform="translate(0 115.906)"/>
+          </g>
+        </g>
+        <circle id="椭圆_19" data-name="椭圆 19" class="cls-1" cx="20.412" cy="20.412" r="20.412" transform="translate(-30.334 84.56)"/>
+      </g>
+    </g>
+    <g id="人力资源_icon" data-name="人力资源 icon" transform="translate(317.066 2148.051)">
+      <path id="路径_393" data-name="路径 393" class="cls-2" d="M839.618-213.5h22.238a8.852,8.852,0,0,1,8.851,8.852v17.264a19.97,19.97,0,0,1-19.97,19.969h0a19.969,19.969,0,0,1-19.97-19.969v-17.264A8.851,8.851,0,0,1,839.618-213.5Z" transform="translate(-2.423 0)"/>
+      <path id="路径_394" data-name="路径 394" class="cls-2" d="M810.934-125.763v-10.826A14.411,14.411,0,0,1,825.344-151h46.524a15.142,15.142,0,0,1,15.142,15.142v10.095a2.853,2.853,0,0,1-2.853,2.853h-70.37A2.853,2.853,0,0,1,810.934-125.763Z" transform="translate(0 -7.637)"/>
+      <path id="路径_395" data-name="路径 395" class="cls-3" d="M883.713-213.5a8.852,8.852,0,0,1,8.852,8.852v17.264a19.962,19.962,0,0,1-9.838,17.212" transform="translate(-8.772 0)"/>
+      <path id="路径_396" data-name="路径 396" class="cls-3" d="M900.8-150.776A15.147,15.147,0,0,1,913.5-135.83v10.095a2.853,2.853,0,0,1-2.853,2.853h-9.378" transform="translate(-10.982 -7.665)"/>
+    </g>
+    <g id="组_125" data-name="组 125" transform="translate(749.851 1530.022)">
+      <line id="直线_3" data-name="直线 3" class="cls-4" y2="30.168" transform="translate(345.077 367.822)"/>
+      <line id="直线_4" data-name="直线 4" class="cls-4" x1="30.168" transform="translate(329.993 382.906)"/>
+    </g>
+    <g id="组_126" data-name="组 126" transform="matrix(0.921, -0.391, 0.391, 0.921, 785.659, 1828.073)">
+      <line id="直线_3-2" data-name="直线 3" class="cls-5" y2="17.383" transform="translate(338.685 367.822)"/>
+      <line id="直线_4-2" data-name="直线 4" class="cls-5" x1="17.383" transform="translate(329.993 376.513)"/>
+    </g>
+  </g>
+</svg>

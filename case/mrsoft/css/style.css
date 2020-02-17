@@ -1,0 +1,31 @@
+BODY {
+	CLEAR: both;
+	FONT-SIZE: 12px;
+	MARGIN: 0px auto;
+	LINE-HEIGHT: 120%;
+	FONT-FAMILY: "ËÎÌו";
+	color:#464444;
+}
+DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px auto; LINE-HEIGHT: 120%; PADDING-TOP: 0px; FONT-FAMILY: "ËÎÌו"
+}
+UL {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; BORDER-RIGHT-WIDTH: 0px
+}
+P {MARGIN: 0px;}
+A:link {COLOR: #000000; TEXT-DECORATION: none;}
+A:visited {COLOR: #000000; TEXT-DECORATION: none;}
+A:hover {COLOR: #fa4a05; TEXT-DECORATION: none;}
+.t14{font-size:14px; font-weight:bold; line-height:240%;}
+.bai{font-weight:bold; color:#ffffff; letter-spacing:1px;}
+.bai A:link {COLOR: #ffffff; TEXT-DECORATION: none;}
+.bai A:visited {COLOR: #ffffff; TEXT-DECORATION: none;}
+.bai A:hover {COLOR: #ffffff; TEXT-DECORATION:underline;}
+.baia{font-weight:bold; color:#ffffff; letter-spacing:3px;}
+.baia A:link {COLOR: #ffffff; TEXT-DECORATION: none;}
+.baia A:visited {COLOR: #ffffff; TEXT-DECORATION: none;}
+.baia A:hover {COLOR: #ffffff; TEXT-DECORATION:underline;}
+.page{color:#7E7D7D;}
+.page A:link {TEXT-DECORATION: none; color:#7E7D7D; padding:4px;}
+.page A:visited {TEXT-DECORATION: none; color:#7E7D7D; padding:4px;}
+.page A:hover {TEXT-DECORATION:none; background-color:#FF5000; padding:4px; color:#ffffff;}
