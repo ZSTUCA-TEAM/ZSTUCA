@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}ZSTUCA{% endblock %}
+
+{% block page_content %}
+    <!-- <div class="page-header">
+        数据：
+        <p>
+        {% if name %}
+            填报成功
+        {% endif %}
+        <br />
+        {% if name %}
+            {{ name }}
+        {% endif %}
+        <br />
+        {% if college %}
+            {{ college }}
+        {% endif %}
+        <br />
+        {% if stu_num %}
+            {{ stu_num }}
+        {% endif %}
+        <br />
+        {% if phone %}
+            {{ phone }}
+        {% endif %}
+        <br />
+        {% if detail %}
+            {{ detail }}
+        {% endif %}
+        </p>
+    </div> -->
+    {{ wtf.quick_form(form) }}
+{% endblock %}
