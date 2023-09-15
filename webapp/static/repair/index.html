@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap5核心CSS文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <title>浙理计协硬件部报修平台</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="title" class="text-center">
+            <p class="h1 mt-5 mb-3">
+                浙江理工大学计算机协会
+            </p>
+            <p class="h1 mb-3">
+                硬件部报修平台
+            </p>
+        </div>
+        <form id="applyInfo" action="/repair/apply" method="post" onsubmit="return postRepair()" class="my-5">
+            <div class="my-3">
+                <label for="name" class="form-label">姓名:</label>
+                <input required type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="gender" class="form-label">性别:</label>
+                <select id="gender" name="gender" class="form-select">
+                    <option>先生</option>
+                    <option>女士</option>
+                </select>
+            </div>
+            <div class="my-3">
+                <label for="academy" class="form-label">学院:</label>
+                <input required type="text" id="academy" name="academy" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="cardId" class="form-label">学号(工号):</label>
+                <input required type="text" id="cardId" name="cardId" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="email" class="form-label">邮箱:</label>
+                <input required type="email" id="email" name="email" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="contact" class="form-label">即时通讯联系方式:</label>
+                <div class="input-group">
+                    <div class="col-3 col-md-1 col-lg-1 col-xl-1">
+                        <select id="contactType" name="contactType" class="form-select">
+                            <option>QQ</option>
+                            <option>微信</option>
+                            <option>手机</option>
+                        </select>
+                    </div>
+                    <input required type="text" id="contact" name="contact" class="form-control">
+                </div>
+            </div>
+            <div class="my-3">
+                <label for="computerType" class="form-label">电脑型号:</label>
+                <input type="text" id="computerType" name="computerType" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="problem" class="form-label">遇到的问题:</label>
+                <input required type="text" id="problem" name="problem" class="form-control">
+            </div>
+
+            <div class="my-3">
+                <label for="location" class="form-label">宿舍(办公室)门牌号:</label>
+                <p class="small">暂不支持临平校区</p>
+                <div class="input-group">
+                    <div class="col-5 col-md-2 col-lg-2 col-xl-2">
+                        <select id="locationType" name="locationType" class="form-select">
+                            <option>生活一区</option>
+                            <option>生活二区</option>
+                            <option>生活三区</option>
+                            <option>下沙校区</option>
+                        </select>
+                    </div>
+                    <input required type="text" id="location" name="location" class="form-control">
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button type="submit" class="btn btn-primary nowrap" style="width: 100%;">提交</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/repair/assets/js/jquery-3.7.0.min.js"></script>
+    <!-- popper用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+    <!-- Bootstrap5核心JavaScript文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+
+    <script src="/repair/assets/js/ajaxErr.js"></script>
+    <script src="/repair/assets/js/postRepair.js"></script>
+</body>
+
+</html>

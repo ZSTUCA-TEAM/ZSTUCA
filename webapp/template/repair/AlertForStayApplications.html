@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .text-center {
+            text-align: center;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .my-5 {
+            margin-bottom: 5vmax;
+            margin-block-end: 5vmax;
+        }
+
+        .mx-5 {
+            margin-right: 5vmax;
+            margin-left: 5vmax;
+        }
+
+        .ms-3 {
+            margin-left: 3vmax;
+        }
+    </style>
+    <title>浙理计协硬件部——接收滞留申请提醒</title>
+</head>
+
+<body>
+    <div class="mx-5">
+        <div class="text-center">
+            <h1 class="my-5">接收滞留申请提醒</h1>
+        </div>
+        <p>浙理计协硬件部的成员们:</p>
+        <div class="ms-3">
+            <p>目前有如下预约信息已超过2天未被接取,请及时接取这些预约:</p>
+            {{range .StayApplys}}
+            <p>{{.Academy}}学院的{{.Name}}{{.Gender}}关于"{{.Problem}}"的硬件维修申请.
+            </p>
+            {{end}}
+            <p>感谢您作为浙江理工大学计算机协会硬件部的一份子为浙江理工大学做出的贡献!</p>
+        </div>
+        <div class="text-end">
+            <p>浙江理工大学计算机协会</p>
+            <p>硬件部</p>
+        </div>
+    </div>
+</body>
+
+</html>
