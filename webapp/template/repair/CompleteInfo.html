@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap5核心CSS文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+
+    <style>
+        .fullScreen {
+            height: 100%;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+    </style>
+    <title>浙理计协硬件部后台——维修任务完成申报</title>
+</head>
+
+<body>
+    <div class="container d-flex flex-column justify-content-center fullScreen">
+        <div class="text-center">
+            <p class="h1 my-3">维修任务完成申报</p>
+            <p class="text-warning my-3">请准确填写,如有造假,后果自负</p>
+        </div>
+        <form id="completeDeclaration" action="declaration" method="post" onsubmit="return true" class="my-5">
+            <div class="my-3">
+                <label for="otherAdmin" class="form-label">其他参与人员(不用包括自己,不同人员之间任意分隔符即可,如无,空着即可):</label>
+                <input type="text" id="otherAdmin" name="otherAdmin" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="time" class="form-label">维修时间:</label>
+                <input required type="datetime-local" id="time" name="time" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="location" class="form-label">地点:</label>
+                <input required type="text" id="location" name="location" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="duration" class="form-label">时长(自定单位):</label>
+                <input required type="text" id="duration" name="duration" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="workContent" class="form-label">工作内容:</label>
+                <input type="text" id="workContent" name="workContent" class="form-control">
+            </div>
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary nowrap" style="width: 100%;">提交</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/repair/assets/js/jquery-3.7.0.min.js"></script>
+    <!-- popper用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+    <!-- Bootstrap5核心JavaScript文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+
+    <script>
+        // 补上get请求参数
+        $(function () {
+            $("#completeDeclaration").attr("action", "declaration?ID=" + getUrlParam("ID") + "&username=" + getUrlParam("username") + "&password=" + getUrlParam("password"));
+        });
+
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+    </script>
+
+</body>
+
+</html>

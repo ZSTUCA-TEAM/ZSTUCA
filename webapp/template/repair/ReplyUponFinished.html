@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .text-center {
+            text-align: center;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .my-5 {
+            margin-bottom: 5vmax;
+            margin-block-end: 5vmax;
+        }
+
+        .mx-5 {
+            margin-right: 5vmax;
+            margin-left: 5vmax;
+        }
+
+        .ms-3 {
+            margin-left: 3vmax;
+        }
+    </style>
+    <title>浙理计协硬件部——硬件报修申请已完成通知</title>
+</head>
+
+<body>
+    <div class="mx-5">
+        <div class="text-center">
+            <h1 class="my-5">硬件报修申请已完成通知</h1>
+        </div>
+        <p>尊敬的{{.Name}}{{.Gender}},您好:</p>
+        <div class="ms-3">
+            <p>您提交的关于"{{.Problem}}"的硬件维修申请已成功由计算机协会硬件部完成.以下是此次维修的情况:</p>
+            <ul>
+                <li>维修任务接取人员:{{.AdminName}}</li>
+                <li>维修任务其他参与人员:{{.OtherAdminName}}</li>
+                <li>维修任务时间:{{.Time}}</li>
+                <li>维修地点:{{.Location}}</li>
+                <li>维修持续时间:{{.Duration}}</li>
+                <li>维修内容:{{.WorkContent}}</li>
+            </ul>
+            <p>以上内容的真实性(并不一定需要非常准确)涉及到硬件部的内部事宜,如有任何异议,请联系硬件部诸部长QQ:<a
+                    href="tencent://message/?uin=2082590035&Site=&Menu=yes">2082590035</a></p>
+            <p>感谢您对浙江理工大学计算机协会硬件部的支持!</p>
+        </div>
+        <div class="text-end">
+            <p>浙江理工大学计算机协会</p>
+            <p>硬件部</p>
+        </div>
+    </div>
+</body>
+
+</html>

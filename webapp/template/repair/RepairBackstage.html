@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-cn" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap5核心CSS文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+
+    <style>
+        .fullScreen {
+            height: 100%;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+    </style>
+    <title>浙理计协硬件部报修后台</title>
+</head>
+
+<body class="fullScreen">
+    <!-- 顶部导航栏 -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- 标题 -->
+        <a class="navbar-brand ms-3" href="javascript:void(0)">浙理计协硬件部报修后台</a>
+
+        <!-- 屏幕尺寸不足时的折叠导航栏 -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 导航栏内容 -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="switchTo('pendingTasks')">待接取的任务</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="switchTo('acceptedTasks')">已接取的任务</a>
+                </li>
+                {{if .IsRootAdmin}}
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="switchTo('hardwareMemberRegist')">硬件部成员注册</a>
+                </li>
+                {{end}}
+            </ul>
+        </div>
+    </nav>
+
+    <div id="pendingTasks" class="container text-center my-5">
+        <div class="table-responsive">
+            <table class="table table-hover table-light table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>学院</th>
+                        <th>学工号</th>
+                        <th>电脑型号</th>
+                        <th>遇到的问题</th>
+                        <th>门牌号类型</th>
+                        <th>门牌号</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{range .NewApplyInfo}}
+                    <tr>
+                        <td>{{.ID}}</td>
+                        <td>{{.Name}}</td>
+                        <td>{{.Gender}}</td>
+                        <td>{{.Academy}}</td>
+                        <td>{{.CardId}}</td>
+                        <td>{{.ComputerType}}</td>
+                        <td>{{.Problem}}</td>
+                        <td>{{.LocationType}}</td>
+                        <td>{{.Location}}</td>
+                        <td><button class="btn" onclick="takeMission(this)">接取</button></td>
+                    </tr>
+                    {{end}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="acceptedTasks" class="container text-center my-5">
+        <div class="table-responsive">
+            <table class="table table-hover table-light table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>学院</th>
+                        <th>学工号</th>
+                        <th>邮箱</th>
+                        <th>联系方式类型</th>
+                        <th>联系方式</th>
+                        <th>电脑型号</th>
+                        <th>遇到的问题</th>
+                        <th>门牌号类型</th>
+                        <th>门牌号</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{range .ReceiveApplyInfo}}
+                    <tr>
+                        <td>{{.ID}}</td>
+                        <td>{{.Name}}</td>
+                        <td>{{.Gender}}</td>
+                        <td>{{.Academy}}</td>
+                        <td>{{.CardId}}</td>
+                        <td>{{.Email}}</td>
+                        <td>{{.ContactType}}</td>
+                        <td>{{.Contact}}</td>
+                        <td>{{.ComputerType}}</td>
+                        <td>{{.Problem}}</td>
+                        <td>{{.LocationType}}</td>
+                        <td>{{.Location}}</td>
+                        <td>
+                            {{if .IsFinish}}
+                            已完成
+                            {{else}}
+                            <button class="btn" onclick="finishMission(this)">完成</button>
+                            {{end}}
+                        </td>
+                    </tr>
+                    {{end}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {{if .IsRootAdmin}}
+    <div id="hardwareMemberRegist" class="container my-5">
+        <form id="adminInfo" action="admin" method="post" onsubmit="return true" class="my-5">
+            <div class="my-3">
+                <label for="username" class="form-label">用户名:</label>
+                <input required type="text" id="username" name="username" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="password" class="form-label">密码:</label>
+                <input required type="text" id="password" name="password" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="name" class="form-label">姓名:</label>
+                <input required type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="gender" class="form-label">性别:</label>
+                <select id="gender" name="gender" class="form-select">
+                    <option>男</option>
+                    <option>女</option>
+                </select>
+            </div>
+            <div class="my-3">
+                <label for="email" class="form-label">邮箱:</label>
+                <input required type="email" id="email" name="email" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="QQ" class="form-label">QQ:</label>
+                <input type="text" id="QQ" name="QQ" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="weChat" class="form-label">微信:</label>
+                <input required type="text" id="weChat" name="weChat" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="phone" class="form-label">手机号:</label>
+                <input required type="text" id="phone" name="phone" class="form-control">
+            </div>
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary nowrap" style="width: 100%;">提交</button>
+            </div>
+        </form>
+    </div>
+    {{end}}
+
+    <!-- jQuery -->
+    <script src="/repair/assets/js/jquery-3.7.0.min.js"></script>
+    <!-- popper用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+    <!-- Bootstrap5核心JavaScript文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+
+    <script src="/repair/assets/js/dealMission.js"></script>
+    <script src="/repair/assets/js/bsPannelSwitchDiv.js"></script>
+
+    <script>
+        // 补上get请求参数
+        $(function () {
+            $("#adminInfo").attr("action", "admin?username=" + getUrlParam("username") + "&password=" + getUrlParam("password"));
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .text-center {
+            text-align: center;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .my-5 {
+            margin-bottom: 5vmax;
+            margin-block-end: 5vmax;
+        }
+
+        .mx-5 {
+            margin-right: 5vmax;
+            margin-left: 5vmax;
+        }
+
+        .ms-3 {
+            margin-left: 3vmax;
+        }
+    </style>
+    <title>浙理计协硬件部——已接取预约任务通知</title>
+</head>
+
+<body>
+    <div class="mx-5">
+        <div class="text-center">
+            <h1 class="my-5">已接取预约任务通知</h1>
+        </div>
+        <p>{{.AdminName}}:</p>
+        <div class="ms-3">
+            <p>您已成功接取{{.Academy}}学院的{{.Name}}{{.Gender}}(学工号:{{.CardId}})提交的关于"{{.Problem}}"{{.ComputerType}}的硬件维修申请.对方邮箱为{{.Email}},{{.ContactType}}为{{.Contact}},宿舍(办公室)位于{{.LocationType}}{{.Location}}.请自行于对方联系并完成此项维修任务.
+            </p>
+            <p>感谢您作为浙江理工大学计算机协会硬件部的一份子为浙江理工大学做出的贡献!</p>
+        </div>
+        <div class="text-end">
+            <p>浙江理工大学计算机协会</p>
+            <p>硬件部</p>
+        </div>
+    </div>
+
+    {{if not .IsEmail}}
+    <div class="text-center">
+        <button
+            onclick="window.location.href = './panel?username=' + getUrlParam('username') + '&password=' + getUrlParam('password')">返回</button>
+    </div>
+
+    <script>
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+    </script>
+
+    {{end}}
+</body>
+
+
+</html>

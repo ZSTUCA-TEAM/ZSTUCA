@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .text-center {
+            text-align: center;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .my-5 {
+            margin-bottom: 5vmax;
+            margin-block-end: 5vmax;
+        }
+
+        .mx-5 {
+            margin-right: 5vmax;
+            margin-left: 5vmax;
+        }
+
+        .ms-3 {
+            margin-left: 3vmax;
+        }
+    </style>
+    <title>浙理计协硬件部——硬件报修申请已提交通知</title>
+</head>
+
+<body>
+    <div class="mx-5">
+        <div class="text-center">
+            <h1 class="my-5">硬件报修申请已提交通知</h1>
+        </div>
+        <p>尊敬的{{.Name}}{{.Gender}},您好:</p>
+        <div class="ms-3">
+            <p>您于刚刚提交的关于"{{.Problem}}"的硬件维修申请已成功提交至计算机协会硬件部.请等待相关人员接取您的报修申请.后续会再次邮件通知并给与您对接人的联系方式.</p>
+            <p>如有紧急情况需立刻处理,请联系硬件部诸部长QQ:<a href="tencent://message/?uin=2082590035&Site=&Menu=yes">2082590035</a></p>
+            <p>感谢您对浙江理工大学计算机协会硬件部的支持!</p>
+        </div>
+        <div class="text-end">
+            <p>浙江理工大学计算机协会</p>
+            <p>硬件部</p>
+        </div>
+    </div>
+</body>
+
+</html>

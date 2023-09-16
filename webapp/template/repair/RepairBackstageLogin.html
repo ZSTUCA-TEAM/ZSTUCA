@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap5核心CSS文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+
+    <style>
+        .fullScreen {
+            height: 100%;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+    </style>
+    <title>浙理计协硬件部报修后台</title>
+</head>
+
+<body class="fullScreen">
+    <div class="container d-flex flex-column justify-content-center fullScreen text-center" style="width: 50%;">
+        <p class="h1">浙理计协硬件部报修后台</p>
+
+        <p class="text-warning my-3">{{if .IsWrong}}用户名或密码错误{{end}}</p>
+        <form id="adminLogin" action="/repair/bs/panel" method="get" onsubmit="return true" class="mb-5">
+            <div class="my-3 row">
+                <div class="col-3 text-center text-end">
+                    <label for="username" class="form-label nowrap">用户名:</label>
+                </div>
+                <div class="col-8">
+                    <input required type="text" id="username" name="username" class="form-control">
+                </div>
+            </div>
+            <div class="my-3 row">
+                <div class="col-3 text-center text-end">
+                    <label for="password" class="form-label nowrap">密码:</label>
+                </div>
+                <div class="col-8">
+                    <input required type="password" id="password" name="password" class="form-control">
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button type="submit" class="btn btn-primary nowrap" style="width: 90%;">登录</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/repair/assets/js/jquery-3.7.0.min.js"></script>
+    <!-- popper用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+    <!-- Bootstrap5核心JavaScript文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
