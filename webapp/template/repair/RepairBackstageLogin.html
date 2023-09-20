@@ -11,38 +11,34 @@
         .fullScreen {
             height: 100%;
         }
-
-        .nowrap {
-            white-space: nowrap;
-        }
     </style>
     <title>浙理计协硬件部报修后台</title>
 </head>
 
 <body class="fullScreen">
-    <div class="container d-flex flex-column justify-content-center fullScreen text-center" style="width: 50%;">
+    <div class="container d-flex flex-column justify-content-center fullScreen text-center">
         <p class="h1">浙理计协硬件部报修后台</p>
 
         <p class="text-warning my-3">{{if .IsWrong}}用户名或密码错误{{end}}</p>
         <form id="adminLogin" action="/repair/bs/panel" method="get" onsubmit="return true" class="mb-5">
             <div class="my-3 row">
-                <div class="col-3 text-center text-end">
-                    <label for="username" class="form-label nowrap">用户名:</label>
+                <div class="col-3 text-nowrap">
+                    <label for="username" class="form-label text-nowrap">用户名:</label>
                 </div>
                 <div class="col-8">
                     <input required type="text" id="username" name="username" class="form-control">
                 </div>
             </div>
             <div class="my-3 row">
-                <div class="col-3 text-center text-end">
-                    <label for="password" class="form-label nowrap">密码:</label>
+                <div class="col-3 text-nowrap">
+                    <label for="password" class="form-label text-nowrap">密码:</label>
                 </div>
                 <div class="col-8">
                     <input required type="password" id="password" name="password" class="form-control">
                 </div>
             </div>
             <div class="text-center mt-5">
-                <button type="submit" class="btn btn-primary nowrap" style="width: 90%;">登录</button>
+                <button type="submit" class="btn btn-primary text-nowrap" style="width: 90%;">登录</button>
             </div>
         </form>
     </div>

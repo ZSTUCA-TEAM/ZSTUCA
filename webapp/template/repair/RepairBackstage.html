@@ -12,8 +12,8 @@
             height: 100%;
         }
 
-        .nowrap {
-            white-space: nowrap;
+        .tableDownLine {
+            border-bottom: 1px solid black;
         }
     </style>
     <title>浙理计协硬件部报修后台</title>
@@ -48,7 +48,7 @@
         </div>
     </nav>
 
-    <div id="pendingTasks" class="container text-center my-5">
+    <div id="pendingTasks" class="container-fluid text-center my-5" style="display: flex; flex-direction: column; ">
         <div class="table-responsive">
             <table class="table table-hover table-light table-striped">
                 <thead>
@@ -59,7 +59,6 @@
                         <th>学院</th>
                         <th>学工号</th>
                         <th>电脑型号</th>
-                        <th>遇到的问题</th>
                         <th>门牌号类型</th>
                         <th>门牌号</th>
                     </tr>
@@ -73,10 +72,13 @@
                         <td>{{.Academy}}</td>
                         <td>{{.CardId}}</td>
                         <td>{{.ComputerType}}</td>
-                        <td>{{.Problem}}</td>
                         <td>{{.LocationType}}</td>
                         <td>{{.Location}}</td>
-                        <td><button class="btn" onclick="takeMission(this)">接取</button></td>
+                        <td rowspan="2" class="tableDownLine"><button class="btn btn-success"
+                                onclick="takeMission(this)">接取</button></td>
+                    </tr>
+                    <tr class="tableDownLine">
+                        <td colspan="8">{{.Problem}}急修：电脑启动的时候，出现黑屏，然后启动不起来，有时候能启动有时候不能启动。据说是硬盘松动或者搬家时出现不稳定的系统情况。</td>
                     </tr>
                     {{end}}
                 </tbody>
@@ -84,7 +86,7 @@
         </div>
     </div>
 
-    <div id="acceptedTasks" class="container text-center my-5">
+    <div id="acceptedTasks" class="container-fluid text-center my-5">
         <div class="table-responsive">
             <table class="table table-hover table-light table-striped">
                 <thead>
@@ -98,7 +100,6 @@
                         <th>联系方式类型</th>
                         <th>联系方式</th>
                         <th>电脑型号</th>
-                        <th>遇到的问题</th>
                         <th>门牌号类型</th>
                         <th>门牌号</th>
                     </tr>
@@ -115,16 +116,18 @@
                         <td>{{.ContactType}}</td>
                         <td>{{.Contact}}</td>
                         <td>{{.ComputerType}}</td>
-                        <td>{{.Problem}}</td>
                         <td>{{.LocationType}}</td>
                         <td>{{.Location}}</td>
-                        <td>
+                        <td rowspan="2" class="tableDownLine">
                             {{if .IsFinish}}
                             已完成
                             {{else}}
-                            <button class="btn" onclick="finishMission(this)">完成</button>
+                            <button class="btn btn-success" onclick="finishMission(this)">完成</button>
                             {{end}}
                         </td>
+                    </tr>
+                    <tr>
+                        <td colspan="11" class="tableDownLine">{{.Problem}}</td>
                     </tr>
                     {{end}}
                 </tbody>
@@ -136,42 +139,42 @@
     <div id="hardwareMemberRegist" class="container my-5">
         <form id="adminInfo" action="admin" method="post" onsubmit="return true" class="my-5">
             <div class="my-3">
-                <label for="username" class="form-label">用户名:</label>
+                <label for="username" class="form-label text-nowrap">用户名:</label>
                 <input required type="text" id="username" name="username" class="form-control">
             </div>
             <div class="my-3">
-                <label for="password" class="form-label">密码:</label>
+                <label for="password" class="form-label text-nowrap">密码:</label>
                 <input required type="text" id="password" name="password" class="form-control">
             </div>
             <div class="my-3">
-                <label for="name" class="form-label">姓名:</label>
+                <label for="name" class="form-label text-nowrap">姓名:</label>
                 <input required type="text" id="name" name="name" class="form-control">
             </div>
             <div class="my-3">
-                <label for="gender" class="form-label">性别:</label>
+                <label for="gender" class="form-label text-nowrap">性别:</label>
                 <select id="gender" name="gender" class="form-select">
                     <option>男</option>
                     <option>女</option>
                 </select>
             </div>
             <div class="my-3">
-                <label for="email" class="form-label">邮箱:</label>
+                <label for="email" class="form-label text-nowrap">邮箱:</label>
                 <input required type="email" id="email" name="email" class="form-control">
             </div>
             <div class="my-3">
-                <label for="QQ" class="form-label">QQ:</label>
+                <label for="QQ" class="form-label text-nowrap">QQ:</label>
                 <input type="text" id="QQ" name="QQ" class="form-control">
             </div>
             <div class="my-3">
-                <label for="weChat" class="form-label">微信:</label>
+                <label for="weChat" class="form-label text-nowrap">微信:</label>
                 <input required type="text" id="weChat" name="weChat" class="form-control">
             </div>
             <div class="my-3">
-                <label for="phone" class="form-label">手机号:</label>
+                <label for="phone" class="form-label text-nowrap">手机号:</label>
                 <input required type="text" id="phone" name="phone" class="form-control">
             </div>
             <div class="text-center mt-3">
-                <button type="submit" class="btn btn-primary nowrap" style="width: 100%;">提交</button>
+                <button type="submit" class="btn btn-primary text-nowrap" style="width: 100%;">提交</button>
             </div>
         </form>
     </div>
