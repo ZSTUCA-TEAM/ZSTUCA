@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap5核心CSS文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+
+    <style>
+        .fullScreen {
+            height: 100%;
+        }
+
+        .fullWidth {
+            width: 100%;
+        }
+
+        .tableDownLine {
+            border-bottom: 1px solid black;
+        }
+
+        .spanRight {
+            float: right;
+        }
+    </style>
+    <title>浙理计协硬件部报修后台</title>
+</head>
+
+<body class="fullScreen">
+    <!-- 顶部导航栏 -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- 标题 -->
+        <a class="navbar-brand ms-3" href="javascript:void(0)">浙理计协硬件部报修后台</a>
+
+        <!-- 屏幕尺寸不足时的折叠导航栏 -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 导航栏内容 -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="switchTo('pendingTasks')">待接取的任务</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="switchTo('receiptedTasks')">已接取的任务</a>
+                </li>
+                {{if .IsRootAdmin}}
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="switchTo('allTasks')">所有委托信息</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="switchTo('adminRegister')">硬件部成员注册</a>
+                </li>
+                {{end}}
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 筛选条件 -->
+    <div id="filter" class="container-fluid col-12 mt-3 ms-3">
+        <input class="form-check-input" type="checkbox" value="showFinish" id="showFinish" onclick="switchTo()">
+        <label class="form-check-label me-3" for="showFinish">
+            显示已完成
+        </label>
+        <input class="form-check-input" type="checkbox" value="showAbandoned" id="showAbandoned" onclick="switchTo()">
+        <label class="form-check-label" for="showAbandoned">
+            显示已放弃
+        </label>
+    </div>
+
+    <div id="main" class="container-fluid mt-3 row pe-0">
+    </div>
+
+    <!-- jQuery -->
+    <script src="/repair/assets/js/jquery-3.7.0.min.js"></script>
+    <!-- popper用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+    <!-- Bootstrap5核心JavaScript文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+
+    <script src="/repair/assets/js/ajaxErr.js"></script>
+    <script src="/repair/assets/js/bsPannelCardWidthControl.js"></script>
+    <script src="/repair/assets/js/bsPannelSwitchDiv.js"></script>
+    <script src="/repair/assets/js/dealMission.js"></script>
+    <script src="/repair/assets/js/registerAdmin.js"></script>
+</body>
+
+</html>

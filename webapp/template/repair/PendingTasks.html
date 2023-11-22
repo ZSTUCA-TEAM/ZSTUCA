@@ -1,0 +1,26 @@
+{{range .ApplyInfo}}
+<div class="mb-3 col-lg-4 col-md-6 col-12">
+    <div class="card fullScreen">
+        <div class="card-body text-start">
+            <p class="mb-0">
+                <span class="h1">{{.Name}}</span>
+                <span>{{.Gender}}</span>
+                <span class="small spanRight">{{.ComputerType}}</span>
+            </p>
+            <p class="spanRight h1">{{.ID}}</p>
+            <p class="small mb-0">
+                学工号:{{.CardId}}
+            </p>
+            <hr>
+            <p>
+                {{.Problem}}
+            </p>
+        </div>
+        <div class="card-footer text-muted text-center">
+            <button class="btn btn-success fullWidth" onclick="takeMission(this)" aid="{{.ID}}">接取</button>
+            {{.Academy}}·{{.LocationType}}{{.Location}}<br>
+            {{.CreateAt}}
+        </div>
+    </div>
+</div>
+{{end}}

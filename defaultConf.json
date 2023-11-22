@@ -1,0 +1,23 @@
+{
+  "serverPort": "8080",
+  "databaseName": "mysql",
+  "dataSourceName": "",
+  "repair": {
+    "emailAddr": "imaphz.qiye.163.com",
+    "emailPort": "25",
+    "emailPassword": "",
+    "bsAuthUsername": "",
+    "bsAuthPassword": "",
+    "infoEmailForm": "",
+    "infoEmailTitle": [
+      "浙理计协硬件部——报修申请已提交至硬件部后台通知",
+      "浙理计协硬件部——有新提交的申请通知",
+      "浙理计协硬件部——接收滞留申请提醒",
+      "浙理计协硬件部——报修申请已被硬件部成员领取通知",
+      "浙理计协硬件部——已接取预约任务通知",
+      "浙理计协硬件部——硬件报修申请已完成通知",
+      "浙理计协硬件部——报修申请已被放弃通知",
+      "浙理计协硬件部——群发通知邮件"
+    ]
+  }
+}

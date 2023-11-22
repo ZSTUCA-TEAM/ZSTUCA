@@ -1,0 +1,40 @@
+{{range .ApplyInfo}}
+<div class="mb-3 col-lg-4 col-md-6 col-12">
+    <div class="card fullScreen">
+        <div class="card-body text-start">
+            <p class="mb-0">
+                <span class="h1">{{.Name}}</span>
+                <span>{{.Gender}}</span>
+                <span class="small spanRight">{{.ComputerType}}</span>
+            </p>
+            <p class="small mb-0">
+                学工号:{{.CardId}}
+            </p>
+            <p class="small mb-0">
+                邮箱:{{.Email}}
+            </p>
+            <p class="h1 spanRight">{{.ID}}</p>
+            <p class="small mb-0">
+                {{.ContactType}}:{{.Contact}}
+            </p>
+            <hr>
+            <p>
+                {{.Problem}}
+            </p>
+        </div>
+        <div class="card-footer text-muted text-center">
+            {{if .IsFinish}}
+            <button class="btn btn-secondary fullWidth" onclick="">{{.Admin.Name}}·已完成</button>
+            {{else if .IsAbandoned}}
+            <button class="btn btn-secondary fullWidth" onclick="">{{.Admin.Name}}·已放弃</button>
+            {{else if .Admin.Name}}
+            <button class="btn btn-secondary fullWidth" onclick="">{{.Admin.Name}}·已接取</button>
+            {{else}}
+            <button class="btn btn-secondary fullWidth" onclick="">未接取</button>
+            {{end}}
+            {{.Academy}}·{{.LocationType}}{{.Location}}<br>
+            {{.CreateAt}}
+        </div>
+    </div>
+</div>
+{{end}}
