@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="498.758" height="330.593" viewBox="0 0 498.758 330.593">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f5f8fe;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        stroke: #4895ff;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-width: 7px;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke-linecap: round;
+      }
+
+      .cls-4 {
+        stroke: #ff4da6;
+      }
+
+      .cls-5 {
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g id="组_153" data-name="组 153" transform="translate(-980.357 -2950.296)">
+    <g id="组_112" data-name="组 112" transform="matrix(0.978, 0.208, -0.208, 0.978, 90.125, 2942.03)">
+      <path id="路径_382" data-name="路径 382" class="cls-1" d="M1187.942,100.367,1211.018,54.5H1139.7a6.208,6.208,0,0,0-6.2,6.2V191.144a6.208,6.208,0,0,0,6.2,6.2h130.444a6.208,6.208,0,0,0,6.2-6.2V163.272l-81.1-40.8A16.511,16.511,0,0,1,1187.942,100.367Z" transform="translate(-98.879 -153.324)"/>
+      <path id="路径_383" data-name="路径 383" class="cls-1" d="M1558.667-143.274l-167.061-84.05a16.511,16.511,0,0,0-22.1,7.308l-55.658,110.629h53.811a16.784,16.784,0,0,1,16.765,16.765V15.263l75.4,37.935a16.511,16.511,0,0,0,22.1-7.308l84.05-167.06A16.511,16.511,0,0,0,1558.667-143.274Z" transform="translate(-196.389 0)"/>
+      <path id="路径_384" data-name="路径 384" class="cls-1" d="M1332.177,54.5H1273.05l-23.076,45.867a16.51,16.51,0,0,0,7.307,22.1l81.1,40.8V60.7A6.208,6.208,0,0,0,1332.177,54.5Z" transform="translate(-160.912 -153.324)"/>
+      <path id="路径_385" data-name="路径 385" class="cls-1" d="M974.993-56.681l-2.24-19.444L951.607-61.013A2.473,2.473,0,0,0,951-57.732l25.829,41.39a2.126,2.126,0,0,0,3.066.654l38.678-27.641a2.473,2.473,0,0,0,.611-3.282l-5.519-8.843-32.124,4.238A5.983,5.983,0,0,1,974.993-56.681Z" transform="translate(-53.25 -44.674)"/>
+      <path id="路径_386" data-name="路径 386" class="cls-1" d="M1017.163-102.413,999.5-90l2.256,19.257a6,6,0,0,0,6.592,5.413l32.36-4.2-20.459-32.233A2.163,2.163,0,0,0,1017.163-102.413Z" transform="translate(-79.086 -29.306)"/>
+    </g>
+    <g id="媒体运营_icon" data-name="媒体运营 icon" transform="translate(843.095 3086.083)">
+      <rect id="矩形_52" data-name="矩形 52" class="cls-2" width="99.805" height="67.75" rx="10.172" transform="translate(289.905 19.445)"/>
+      <line id="直线_5" data-name="直线 5" class="cls-3" y2="5.528" transform="translate(340.314 13.917)"/>
+      <line id="直线_6" data-name="直线 6" class="cls-3" y2="16.534" transform="translate(340.314 87.195)"/>
+      <path id="路径_391" data-name="路径 391" class="cls-4" d="M374.927,52.575,356.555,70.947a2.8,2.8,0,0,1-3.967,0L338.02,56.38a2.8,2.8,0,0,0-3.967,0L316.266,74.166" transform="translate(-5.788 -8.489)"/>
+      <path id="路径_392" data-name="路径 392" class="cls-3" d="M326.446,135.146,348.769,129l21.46,6.146" transform="translate(-8.024 -25.271)"/>
+    </g>
+    <g id="组_120" data-name="组 120" transform="matrix(0.921, 0.391, -0.391, 0.921, 931.896, 2576.629)">
+      <line id="直线_3" data-name="直线 3" class="cls-5" y2="30.168" transform="translate(345.077 367.822)"/>
+      <line id="直线_4" data-name="直线 4" class="cls-5" x1="30.168" transform="translate(329.993 382.906)"/>
+    </g>
+    <g id="组_121" data-name="组 121" transform="matrix(0.588, 0.809, -0.809, 0.588, 1357.176, 2715.094)">
+      <line id="直线_3-2" data-name="直线 3" class="cls-5" y2="23.86" transform="translate(341.923 367.822)"/>
+      <line id="直线_4-2" data-name="直线 4" class="cls-5" x1="23.86" transform="translate(329.993 379.752)"/>
+    </g>
+  </g>
+</svg>
